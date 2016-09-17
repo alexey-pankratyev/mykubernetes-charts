@@ -15,7 +15,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: jenkins-app
-        image: jenkins
+        image: rezeter/rvmjenkins
         ports:
         - containerPort: 8080
         - containerPort: 50000
