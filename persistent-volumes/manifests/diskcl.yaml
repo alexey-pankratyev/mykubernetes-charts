@@ -1,10 +1,25 @@
+piVersion: "v1"
+kind: "PersistentVolume"
+metadata:
+  name: "diskloca"
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: "20Gi" 
+  accessModes:
+    - "ReadWriteOnce"
+  awsElasticBlockStore: 
+    fsType: "ext4" 
+    volumeID: "vol-e0ae5266"
+---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: diskcl
+  name: "diskcl"
 spec:
   accessModes:
-    - ReadWriteOnce
+    - "ReadWriteOnce"
   resources:
     requests:
       storage: 5Gi
